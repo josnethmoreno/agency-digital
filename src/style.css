@@ -10,6 +10,10 @@
   --black-color-200: #222222;
 
   --font: 'Inter', sans-serif;
+  --h1: 88px;
+
+  --z-header: 40;
+  --z-modal-video: 50;
 }
 
 body{
@@ -21,10 +25,15 @@ body{
   margin: 0 auto;
 }
 
+.h1 {
+  font-size: var(--h1);
+}
+
 .header{
   width: 100%;
   height: 100px;
   background-color: var(--aqua-color);
+  z-index: 40;
 }
 
 .menu{
@@ -74,6 +83,58 @@ body{
 }
 
 .home {
-  min-height: 800px;
   background-color: var(--aqua-color);
+  height: 100vh;
+  max-height: 700px;
+  overflow-y: hidden;
+}
+
+.home > .container {
+  display: grid;
+  padding-bottom: 2rem;
+  grid-template-columns: 40% 60%;
+  height: 100%;
+}
+
+.home-h1 {
+  font-weight: 300;
+  line-height: 1.1;
+  align-self: end;
+}
+
+.home-media {
+  position: relative;
+  top: 7rem;
+}
+
+.home-cards {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  bottom: 8rem;
+  width: 450px;
+}
+
+.home-cards figure {
+  position: relative;
+  z-index: 10;
+}
+
+.home-cards figure:nth-child(2) {
+  top: -4rem;
+}
+
+.home-cards figure:nth-child(3) {
+  left: 6rem;
+}
+
+.home-hand {
+  position: absolute;
+  right: -3rem;
+  bottom: 3rem;
+}
+
+.home-play {
+  color: var(--black-color-100);
 }
