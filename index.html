@@ -13,7 +13,7 @@
 
 <body>
   <header class="header">
-    <nav class="menu" aria-label="Main Navigation">
+    <nav class="menu" aria-label="Main Navigation" data-mobile>
       <div class="container">
         <a class="menu-brand" href="#">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,8 +47,12 @@
           <button class="button button-outline" aria-label="Login">Login</button>
           <button class="button" aria-label="Sign Up">Sign Up</button>
         </div>
+        <button class="menu-button" aria-label="Abrir y cerrar menú de navegación" aria-expanded="false">
+          <svg width="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+        </button>
       </div>
-    </nav>
+        <div class="menu-filter-black"></div>
+      </nav>
   </header>
   <main aria-label="Contenido principal de la landing page">
     <section class="home">
@@ -74,6 +78,9 @@
           </figure>
         </div>
       </div>
+    </section>
+    <section class="about" style="height: 100vh">
+      <h2>Lorem, ipsum dolor.</h2>
     </section>
   </main>
   <script type="module" src="src/main.js"></script>

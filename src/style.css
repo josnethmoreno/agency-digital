@@ -38,13 +38,13 @@ body{
 .header{
   width: 100%;
   height: 100px;
-  background-color: var(--aqua-color);
-  z-index: 40;
+  z-index: var(--z-header);
 }
 
 .menu{
   height: 100%;
   width: 100%;
+  background-color: var(--aqua-color);
 }
 
 .menu > .container{
@@ -72,6 +72,14 @@ body{
 .menu-actions {
   display: flex;
   gap: 1rem;
+}
+
+.menu-button {
+  display: none;
+}
+
+.menu-filter-black {
+  display: none;
 }
 
 .button {
@@ -212,6 +220,61 @@ body{
   .container {
     padding: 0 6rem;
   }
+
+  .header {
+    position: fixed;
+    top: 0;
+  }
+
+  .menu {
+    position: relative;
+  }
+
+  .menu-list {
+    position: absolute;
+    top: 100%; 
+    left: 100%;
+    width: 300px;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2rem;
+    background: var(--aqua-color);
+    z-index: var(--z-header);
+  }
+
+  .menu-actions {
+    position: absolute;
+    top: calc(100% + 210px); 
+    left: 0;
+    width: 300px;
+    justify-content: center;
+    padding-bottom: 2rem;
+    background: var(--aqua-color);
+  }
+
+  .menu-button {
+    display: inline-block;
+  }
+
+  .menu-filter-black {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+  }
+
+  .menu.show .menu-list {
+    transform: translateX(-100%);
+  }
+
+  .menu.show .menu-actions {
+    transform: translateX(100%);
+  }
+
   .home {
     height: 100vh;
     max-height: 1024px;
@@ -233,6 +296,7 @@ body{
   .container {
     padding: 0 4rem;
   }
+
   .home-h1 {
     padding-top: 3rem;
     align-self: start;
