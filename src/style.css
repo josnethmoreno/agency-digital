@@ -11,6 +11,7 @@
 	--white-color: #ffffff;
   --white-color-100: #F3F5FA;
 	--white-color-200: #F0F0F0;
+	--white-color-300: #FBF9F9;
 
 	--font: 'Inter', sans-serif;
 	--h1: 88px;
@@ -424,6 +425,11 @@ section {
 	padding: 2rem;
 	border: 1px solid var(--white-color-200);
 	border-radius: 15px;
+	transition: .15s;
+}
+
+.services-item:hover {
+	box-shadow: 0px 17px 30px -5px rgba(0,0,0,0.084);
 }
 
 .services-item .h4 {
@@ -440,6 +446,49 @@ section {
 	font-weight: 600;
 	text-transform: uppercase;
 	letter-spacing: 2.4px;
+}
+
+.leads {
+	background-color: var(--white-color-300);
+}
+
+.leads-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.leads-figure img{
+	max-width: 100%;
+}
+
+.leads-content {
+	padding-top: 4rem;
+	padding-left: 6rem;
+}
+
+.leads-content hr {
+	display: block;
+	width: 40px;
+	height: 4px;
+	margin-bottom: .5rem;
+	border-radius: 15px;
+	border: none;
+	background-color: var(--dark-color);
+}
+
+.leads-content .h2 {
+	width: 325px;
+	color: var(--dark-color);
+	font-size: 35px;
+	font-weight: 600;
+	line-height: 1.2;
+	margin-bottom: 2rem;
+}
+
+.leads-content p{
+	width: 320px;
+	color: var(--gray-color-100);
+	line-height: 30px;
 }
 
 @media (max-width: 944px) {
