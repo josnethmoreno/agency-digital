@@ -32,7 +32,7 @@ body {
 }
 
 section {
-	padding: 5rem 0;
+	padding: 7rem 0;
 }
 
 .container {
@@ -134,6 +134,7 @@ section {
 .home {
 	background-color: var(--aqua-color);
 	height: 640px;
+	overflow: hidden;
 }
 
 .home > .container {
@@ -147,6 +148,7 @@ section {
 	font-weight: 300;
 	line-height: 1.1;
 	align-self: end;
+	z-index: 10;
 }
 
 .home-media {
@@ -159,7 +161,7 @@ section {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 1rem;
-	bottom: 8rem;
+	bottom: 4rem;
 	width: 450px;
 }
 
@@ -183,7 +185,7 @@ section {
 .home-hand {
 	position: absolute;
 	right: -3rem;
-	bottom: 0rem;
+	bottom: -2.2rem;
 }
 
 .home-play {
@@ -362,6 +364,18 @@ section {
   color: var(--gray-color-100);
 }
 
+.services-content {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.services-h2 {
+	max-width: 400px;
+	line-height: 1.1;
+	color: var(--dark-color);
+}
+
 @media (max-width: 944px) {
 	.container {
 		padding: 0 6rem;
@@ -458,7 +472,7 @@ section {
 
 	.home-h1 {
 		max-width: 480px;
-		align-self: center;
+		align-self: start;
 	}
 
   .about > .container {
@@ -490,6 +504,12 @@ section {
 	}
 }
 
+@media (max-width: 540px) {
+	.home-cards img {
+		display: none;
+	}
+}
+
 @media (max-width: 480px) {
 	:root {
 		--h1: 60px;
@@ -499,13 +519,11 @@ section {
 		padding: 0 2rem;
 	}
 
-	.home-cards img {
-		display: none;
-	}
-
 	.home-play {
 		position: relative;
-    margin-top: 10rem;
+    margin-top: 5rem;
 	}
 }
+
+
 /* HOME */
