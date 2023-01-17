@@ -8,6 +8,7 @@
 	--aqua-color: #7acae5;
   --purple-color: #7C4FCF;
   --red-color: #EE2A52;
+	--salmon-color: #FCC4AD;
 	--white-color: #ffffff;
   --white-color-100: #F3F5FA;
 	--white-color-200: #F0F0F0;
@@ -18,6 +19,8 @@
 	--h2: 42px;
 	--h3: 30px;
   --h4: 24px;
+	--h5: 18px;
+	--text-small: 14px;
 
 	--z-header: 40;
 	--z-modal-video: 50;
@@ -57,6 +60,10 @@ section {
 
 .h4 {
   font-size: var(--h4);
+}
+
+.h5 {
+	font-size: var(--h5);
 }
 
 .button {
@@ -489,6 +496,143 @@ section {
 	width: 320px;
 	color: var(--gray-color-100);
 	line-height: 30px;
+}
+
+.leads-items {
+	display: flex;
+	justify-content: space-around;
+	padding: 5rem 0;
+}
+
+.leads-item {
+	text-align: center;
+}
+
+.leads-item span {
+	font-weight: 600;
+	color: var(--dark-color);
+}
+
+.leads-item p {
+	color: var(--gray-color-100)
+}
+
+.say h2 {
+	margin-bottom: 5rem;
+	text-align: center;
+	color: var(--dark-color)
+}
+
+.say-flex {
+	display: flex;
+	gap: 2rem;
+}
+
+.say-item {
+	display: flex;
+	flex-direction: column;
+	gap: 2.5rem;
+	padding: 3rem 3.5rem;
+	width: 360px;
+	text-align: center;
+	border-radius: 15px;
+}
+
+.say-item:hover {
+	outline: 1px solid var(--white-color-200);
+}
+
+.say-item img {
+	border-radius: 50%;
+	margin: 0 auto;
+	border: 2px solid var(--white-color);
+	box-shadow: 3px 3px 20px -3px rgba(0,0,0,0.1);
+}
+
+.say-item p {
+	color: var(--gray-color-100)
+}
+
+.say-item div {
+	display: flex;
+	flex-direction: column;
+	gap: .4rem;
+}
+
+.say-item hr {
+	margin: 0 auto;
+	width: 44px;
+	height: 3px;
+	background-color: var(--salmon-color);
+	border: none;
+}
+
+.say-item div p {
+	font-size: var(--text-small);
+	color:var(--gray-color)
+}
+
+.blog {
+	background-color: var(--white-color-300);
+}
+
+.blog .h2 {
+	margin-bottom: 5rem;
+	text-align: center;
+	color: var(--dark-color);
+}
+
+.blog-slider {
+	display: flex;
+	flex-direction: column;
+	gap: 4rem
+}
+
+.blog-slider-content {
+	display: flex;
+	gap: 1rem;
+}
+
+.blog-card {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding: .5rem .5rem 2rem .5rem;
+	min-width: 362px !important;
+	border-radius: 15px;
+	background-color: white;
+	box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.084);
+}
+
+.blog-card-container {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding: 0 1rem;
+}
+
+.blog-card span {
+	color: var(--gray-color)
+}
+
+.blog-card h4 {
+
+}
+
+.blog-card a {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	color: var(--gray-color)
+}
+
+.blog-slider-controls {
+	display: flex;
+	gap: 1rem
+}
+
+.blog-slider-controls button {
+	padding: 1rem;
 }
 
 @media (max-width: 944px) {
