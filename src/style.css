@@ -31,6 +31,7 @@ html,
 body {
 	max-width: 100%;
 	overflow-x: hidden;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -331,12 +332,20 @@ section {
 .cta > .container {
   display: flex;
   justify-content: space-between;
+	gap: 4rem;
 }
 
 .cta-h3 {
   width: 300px;
   line-height: 1.2;
   color: var(--dark-color)
+}
+
+.cta-flex {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 4rem;
 }
 
 .cta-item {
@@ -422,8 +431,8 @@ section {
 
 .services-flex {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 2rem;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 4rem;
 }
 
 .services-item {
@@ -485,7 +494,7 @@ section {
 }
 
 .leads-content .h2 {
-	width: 325px;
+	max-width: 325px;
 	color: var(--dark-color);
 	font-size: 35px;
 	font-weight: 600;
@@ -586,7 +595,8 @@ section {
 .blog-slider {
 	display: flex;
 	flex-direction: column;
-	gap: 4rem
+	gap: 4rem;
+	overflow: hidden;
 }
 
 .blog-slider-content {
@@ -636,6 +646,10 @@ section {
 	padding: 1rem;
 }
 
+.blog-slider-controls button:disabled {
+	opacity: .5;
+}
+
 .clients .h5 {
 	margin-bottom: 5rem;
 	text-align: center;
@@ -646,7 +660,7 @@ section {
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
-	gap: 2rem;
+	gap: 5rem;
 }
 
 .clients-flex img {
@@ -659,8 +673,9 @@ section {
 
 .contact h2 {
 	margin: 0 auto;
-	width: 630px;
 	margin-bottom: 2rem;
+	max-width: 630px;
+	color: var(--dark-color)
 }
 
 .contact .button {
@@ -760,7 +775,7 @@ section {
 	color: var(--gray-color)
 }
 
-@media (max-width: 944px) {
+@media (max-width: 1024px) {
 	.container {
 		padding: 0 6rem;
 	}
@@ -871,6 +886,29 @@ section {
   .about-media{
     align-self: center;
   }
+
+	.services > .container {
+		grid-template-columns: 100%;
+	}
+
+	.services-flex {
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	}
+
+	.leads-grid {
+		grid-template-columns: 1fr;
+		place-items: center;
+		gap: 6rem;
+	}
+
+	.leads-content {
+		padding: 0;
+	}
+
+	.say-flex {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 }
 
 @media (max-width: 768px) {
@@ -885,6 +923,15 @@ section {
 	.home-h1 {
 		padding-top: 3rem;
 		align-self: start;
+	}
+
+	.cta > .container {
+		flex-direction: column;
+	}
+
+	.leads-items {
+		flex-wrap: wrap;
+		gap: 4rem
 	}
 }
 
