@@ -602,6 +602,8 @@ section {
 .blog-slider-content {
 	display: flex;
 	gap: 1rem;
+	transition: .3s;
+	transform: translateX(0);
 }
 
 .blog-card {
