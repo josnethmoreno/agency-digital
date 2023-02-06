@@ -943,6 +943,12 @@ section {
 	}
 }
 
+@media (max-height: 500px) {
+	.home-cards img {
+		display: none;
+	}
+}
+
 @media (max-width: 480px) {
 	:root {
 		--h1: 54px;
